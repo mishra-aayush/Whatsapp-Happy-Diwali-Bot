@@ -10,42 +10,51 @@ A bot that automatically replies to all the Happy Diwali wishes on Whatsapp.
 from selenium import webdriver
 import time
 
+#Launching the browser and opening the webpage
 browser = webdriver.Chrome(executable_path='E:\chromedriver')
 browser.get('https://web.whatsapp.com/')
 
+#Predecided message
 msg = "Thank you and a very Happy Diwali to you too!"
 
+#Preventing error of trying to access elements before they appear
 input('Enter any key after scanning QR code')
 time.sleep(7)
 
+#Find the list of all names in the chat section
 titles = browser.find_elements_by_class_name("_3CneP")
-
 names_list = []
 for info in titles:
     names_list.append(info.text)
 
 for name in names_list:
     try:
+        #Open the chat of a specific person
         person = browser.find_element_by_xpath('//span[@title = "{}"]'.format(name))
         person.click()
         
         for i in range(1,5):
             browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         
+        #Get the list of messages exchanged with the person
         message_list = browser.find_elements_by_css_selector("span.selectable-text.invisible-space.copyable-text")
         messages = []
         for message in message_list:
             messages.append(message.text)
             
+        #Checking the last message
         if "happy" in messages[-1].lower() and "diwali" in messages[-1].lower():
+            #Navigate to the type message here section
             message_box = browser.find_element_by_xpath('//div[@class="_3uMse"]')
+            #Typing message in that section
             message_box.send_keys(msg)
-
+            #Accessing the send button
             message_button = browser.find_element_by_xpath('//button[@class="_1U1xa"]')
+            #Clicking the send button
             message_button.click()
 
     except:
         #Exceptions can occour if emojis present in names
         continue
-
+#Close the browser
 browser.close()
