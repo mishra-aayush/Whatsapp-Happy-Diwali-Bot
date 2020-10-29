@@ -10,14 +10,16 @@ A bot that automatically replies to all the Happy Diwali wishes on Whatsapp.
 from selenium import webdriver
 import time
 
-#Launching the browser and opening the webpage
+#Replce the executable_path destination to wherever your webdriver is downloaded
 browser = webdriver.Chrome(executable_path='E:\chromedriver')
+
+#Launching the browser and opening the webpage
 browser.get('https://web.whatsapp.com/')
 
 #Predecided message
 msg = "Thank you and a very Happy Diwali to you too!"
 
-#Preventing error of trying to access elements before they appear
+#Preventing the error of trying to access elements before they appear on the page
 input('Enter any key after scanning QR code')
 time.sleep(7)
 
