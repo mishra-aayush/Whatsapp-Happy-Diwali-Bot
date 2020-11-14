@@ -16,8 +16,9 @@ browser = webdriver.Chrome(executable_path='E:\chromedriver')
 #Launching the browser and opening the webpage
 browser.get('https://web.whatsapp.com/')
 
-#Predecided message
-msg = "Thank you and a very Happy Diwali to you too!"
+#Custom message
+print("What is your reply?")
+msg = input("Enter here: ")
 
 #Preventing the error of trying to access elements before they appear on the page
 input('Enter any key after scanning QR code')
