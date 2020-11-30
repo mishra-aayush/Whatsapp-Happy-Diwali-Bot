@@ -1,6 +1,6 @@
 # Whatsapp Bot
 
-Replying the same thing to each and every Whatsapp contact on Diwali can get get frsutrating, therefore this bot was created to reply to all the Happy Diwali wishes on your Whatsapp. This year, have a hassle free Diwali.
+Replying the same thing to each and every Whatsapp contact on Diwali can get frustrating, therefore this bot was created to reply to all the Happy Diwali wishes on your Whatsapp. This year, have a hassle free Diwali.
 
 ## Steps for use
 
