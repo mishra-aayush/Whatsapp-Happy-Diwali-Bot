@@ -8,10 +8,11 @@ A bot that automatically replies to all the Happy Diwali wishes on Whatsapp.
 """
 
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-#Replce the executable_path destination to wherever your webdriver is downloaded
-browser = webdriver.Chrome(executable_path='E:\chromedriver')
+#Eliminates the need to install webdrivers manually
+browser = webdriver.Chrome(ChromeDriverManager().install())
 
 #Launching the browser and opening the webpage
 browser.get('https://web.whatsapp.com/')
