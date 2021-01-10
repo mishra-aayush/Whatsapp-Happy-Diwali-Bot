@@ -24,3 +24,7 @@ Replying the same thing to each and every Whatsapp contact on Diwali can get fru
     Make sure that the webdriver is in installed and executed in the same location as this python script.
     Failure to observe this step will give you an error `selenium.common.exceptions.WebDriverException`
     
+    
+## Update
+
+Need to manually install chromedriver eliminated. But, not applicable for other webdrivers.
