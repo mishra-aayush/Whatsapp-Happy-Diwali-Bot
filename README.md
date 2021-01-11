@@ -27,4 +27,4 @@ Replying the same thing to each and every Whatsapp contact on Diwali can get fru
     
 ## Update
 
-Need to manually install chromedriver eliminated. But, not applicable for other webdrivers.
+Need to manually install webdrivers eliminated.
